@@ -1,4 +1,4 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<!--The content below is only a placeholder and can be replaced
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
@@ -8,9 +8,6 @@
 <h2>Here are some links to help you start: </h2>
 <ul>
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
     <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
   </li>
   <li>
@@ -18,3 +15,167 @@
   </li>
 </ul>
 
+.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">ASC APP</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a class= "game" href="dashboard">Game</a></li>
+        <li><a href="Game">Score</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+       <li><a href="login"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+   <!--  <li>  <span class="glyphicon glyphicon-log-in"  name="Submit" value="login" type="Submit">Login</span>  </li>-->
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+    </div>
+    <div class="col-sm-8 text-left">
+    <div class="container">
+	<div class="row">
+
+
+        <h1>Emotions matching</h1>
+
+
+      <router-outlet></router-outlet>
+
+      
+           <!--  <p><img src="clip.jpg" alt= "Clipart"></p> -->
+             
+<nav>
+ <!-- <a routerLink="/dashboard">Game</a>  -->
+</nav>
+<router-outlet></router-outlet>
+
+
+  <!--
+ <h3>Top Heroes</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let emotion of emotions" class="col-1-4"
+      routerLink="/detail/{{emotion.id}}">
+    <div class="module emotion">
+      <h4>{{emotion.name}}</h4>
+    </div>
+  </a>
+</div>
+-->
+
+  <!-- box
+
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="dummy"></div>
+        <a href="#x" class="thumbnail purple">Homepage</a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="dummy"></div>
+        <a href="#x" class="thumbnail purple">View Profile</a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="dummy"></div>
+        <a href="#x" class="thumbnail purple">Something<br>2 lines</a>
+	   </div>
+       <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="dummy"></div>
+        <a href="#x" class="thumbnail purple">Something 2 lines</a>
+	   </div>
+       <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="dummy"></div>
+        <a href="#x" class="thumbnail purple">Homepage</a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="dummy"></div>
+        <a href="#x" class="thumbnail purple">View Profile</a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="dummy"></div>
+        <a href="#x" class="thumbnail purple">Something 2 lines</a>
+	   </div>
+       <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="dummy"></div>
+        <a href="#x" class="thumbnail purple">Something 2 lines</a>
+	   </div>
+      -->
+  	</div>
+</div>
+
+ <!--   </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>-->
+    </div>
+  </div>
+</div>
+<!--
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer> -->
+</body>
+</html>
