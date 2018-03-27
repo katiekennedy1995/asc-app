@@ -13,6 +13,6 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist/index.html'));
 }); //Catch all other routes and return the index file
  
-const port = process.env.PORT || '3000';  //port setting
+const port = process.env.PORT || '4200';  //port setting
 app.set('port', port);
-app.listen(port, ()=> console.log(`Listening at localhost:${port}`));
+app.listen(port, ()=> console.log(`Listening at localhost:${4200}`));

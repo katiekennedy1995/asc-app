@@ -21,7 +21,7 @@ export class EmotionService {
     private http: HttpClient,
     private messageService: MessageService) { }
 
-  /** GET heroes from the server */ 
+  /** GET emotions from the server */ 
   getEmotions (): Observable<Emotion[]> {
     return this.http.get<Emotion[]>(this.emotionsUrl)
       .pipe(
@@ -124,15 +124,8 @@ export class EmotionService {
     };
   }
 
-  /** Log a HeroService message with the MessageService */
+  /** Log a EmotionService message with the MessageService */
   private log(message: string) {
     this.messageService.add('EmotionService: ' + message);
   }
 }
-
-
-/*
-Copyright 2017-2018 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/

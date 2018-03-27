@@ -1,9 +1,50 @@
 
 
+<div>
+  
+     <button type="button"  onClick = "this.style.visibility= 'hidden';" class="btn btn-success btn-block" (click)="show = !show">{{show ? 'START GAME' : 'END GAME'}}</button>
+    <br>
+    <div *ngIf="!show">
 
-    <button mat-raised-button color="primary">START GAME</button>
+   
+
+
+  <!--  <img src="../../assets/mood.jpg" alt="sad" id="11" > -->
+    <!--loops through emotions -->
+    <img src="clip.jpg">
+    <div style="width: 50px; height: 50px; background-color: yellow;">
+  
+      
+
+    </div>
+<div class="grid grid-pad">
+
+  <a *ngFor="let face of faces" class="col-1-3" (click)="submitEmotion($event, face.name)" >
+    <!--<div class="module face" img [attr.src]="face.path">-->
+    <div class="module face" [ngStyle]="{ 'background-image': 'url('+face.path+')'}">
+    <h4>{{face.path}}</h4>
+    </div>
+   </a>
+
+   <!--
+   <div [ngStyle]="{ 'background-image': 'url(' + result.image_path+ ')'}">> {{ result.name }} </div> 
+
+   -->
+ 
+<div class="grid grid-pad">
+  <a *ngFor="let emotion of emotions" class="col-1-3"  (click)="submitEmotion($event, emotion.name)">
+    <div class="module emotion">
     
+    <h4>{{emotion.name}}</h4>
+    </div>
+    </a>
+  </div>
 
+     <!--loops through faces -->
+
+
+
+    <!--    <button id="button" onclick="submitEmotion(emotion.id)" ></button> 
 <img src="../../assets/mood.jpg" alt="sad" >
 
 <div class="grid grid-pad">
@@ -15,13 +56,18 @@
   </a>
 
 
-
-
+ -->
+ 
 
    <!-- <button mat-raised-button color="primary" class ="button-sad" value="Click" id="11" >SAD</button>
     <button mat-raised-button color="primary">HAPPY</button>
     <button mat-raised-button color="primary">ANGRY</button> 
  
 </div>
+-->
 
+
+</div> <!--div for startt button -->
 <emotion-search></emotion-search>
+<face-search></face-search>
+
