@@ -23,7 +23,7 @@ export class EmotionsComponent implements OnInit {
     this.emotionService.getEmotions()
     .subscribe(emotions => this.emotions = emotions);
   }
-
+  /*
   add(name: string): void {
     name = name.trim();
     if (!name) { return; }
@@ -36,7 +36,7 @@ export class EmotionsComponent implements OnInit {
   delete(emotion: Emotion): void {
     this.emotions = this.emotions.filter(h => h !== emotion);
     this.emotionService.deleteEmotion(emotion).subscribe();
-  }
+  }*/
 
 }
 

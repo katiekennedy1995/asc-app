@@ -5,45 +5,39 @@ import { DashboardComponent } from './dashboard.component';
 import { EmotionsComponent } from './emotions.component';
 import { EmotionSearchComponent } from './emotion-search.component';
 import { EmotionDetailComponent } from './emotion-detail.component';
-import { FaceService } from 'face.service';
-import { FacesComponent } from './faces.component';
-import { FaceSearchComponent } from './face-search.component';
-import { FaceDetailComponent } from './face-detail.component';
 import { EmotionService } from 'emotion.service';
 import { MessageService } from 'message.service';
-import { ImageService } from 'image.service';
 import {AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ImageComponent } from './image.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from 'in-memory-data.service';
+import { BootstrapModalModule } from 'ng2-bootstrap-modal';
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
- //   LoginComponent,
+   // LoginComponent,
     DashboardComponent,
     EmotionsComponent,
     EmotionSearchComponent,
     EmotionDetailComponent,
-    FacesComponent,
-    FaceSearchComponent,
-    FaceDetailComponent,
-    ImageComponent
-    
   ],
+    
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-     HttpClientInMemoryWebApiModule.forRoot( InMemoryDataService, { dataEncapsulation: false } )
+    BootstrapModalModule,
+    HttpClientInMemoryWebApiModule.forRoot( InMemoryDataService, { dataEncapsulation: false } )
 
-  
   ],
-  providers: [ EmotionService, FaceService, MessageService, ImageService],
+
+  providers: [ EmotionService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
