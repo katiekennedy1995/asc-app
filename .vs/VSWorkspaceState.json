@@ -1,14 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\server",
     "\\src",
     "\\src\\app",
-    "\\src\\assets",
-    "\\src\\environments",
-    "\\src\\matching",
     "\\src\\services"
   ],
-  "SelectedNode": "\\server\\routes",
+  "SelectedNode": "\\src\\app\\dashboard.component.css",
   "PreviewInSolutionExplorer": false
 }

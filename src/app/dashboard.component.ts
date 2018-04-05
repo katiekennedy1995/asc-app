@@ -119,9 +119,15 @@ var span = document.getElementsByClassName("close")[0] as HTMLElement;
              console.log('%c FACE CALLED INSIDE IF:', "font-weight: bold", this.imageMatch );
              console.log('%c emotion CALLED INSIDE IF:', "font-weight: bold", this.emotionMatch );
              console.log("win");
+             var modal = document.getElementById("id01");
+               modal.classList.toggle("show");
+              
           }
             else {
-              alert("lose");
+                         console.log("lose");
+
+              // var modal2 = document.getElementById("myModal2");
+          //modal2.classList.toggle("show");
             }
                     console.log('%c=============================', "color: orange");
 

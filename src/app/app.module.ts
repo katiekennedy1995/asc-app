@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from 'in-memory-data.service';
-import { BootstrapModalModule } from 'ng2-bootstrap-modal';
+//import { BootstrapModalModule } from 'ng2-bootstrap-modal';
 
 
 
@@ -32,7 +32,7 @@ import { BootstrapModalModule } from 'ng2-bootstrap-modal';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BootstrapModalModule,
+ //   BootstrapModalModule,
     HttpClientInMemoryWebApiModule.forRoot( InMemoryDataService, { dataEncapsulation: false } )
 
   ],
