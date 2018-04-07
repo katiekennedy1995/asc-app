@@ -1,26 +1,14 @@
-import { Component } from '@angular/core';
+import { OnInit,Component} from '@angular/core';
+
+import { Observable } from 'rxjs/Observable';
 
 
 @Component({
-  selector: 'app-root',
+    moduleId: module.id,
+  selector: 'app',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+ // styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'app';
-}
+export class AppComponent{
 
-/*
-@Component({
- // selector: 'ngbd-progressbar-showvalue',
-  //templateUrl: './progressbar-showvalue.html',
-  styles: [`
-    ngb-progressbar {
-      margin-top: 5rem;
-    }
-  `]
-})
-export class NgbdProgressbarShowvalue {
 }
-*/
-

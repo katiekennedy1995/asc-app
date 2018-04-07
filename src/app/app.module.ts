@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-//import { LoginComponent } from './login.component';
 import { DashboardComponent } from './dashboard.component';
 import { EmotionsComponent } from './emotions.component';
 import { EmotionSearchComponent } from './emotion-search.component';
@@ -9,11 +8,22 @@ import { EmotionService } from 'emotion.service';
 import { MessageService } from 'message.service';
 import {AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from 'in-memory-data.service';
 //import { BootstrapModalModule } from 'ng2-bootstrap-modal';
+import { HttpModule } from '@angular/http';
 
+import { FormsModule }   from '@angular/forms';
+
+
+import { AlertComponent } from './_directives/index';
+import { AuthGuard } from './guards/index';
+import { JwtInterceptorProvider, ErrorInterceptorProvider } from './_helpers/index';
+import { AlertService, AuthenticationService, UserService } from './_services/index';
+import { HomeComponent } from './home/index';
+import { LoginComponent } from './login/index';
+import { RegisterComponent } from './register/index';
 
 
 
@@ -25,6 +35,10 @@ import { InMemoryDataService }  from 'in-memory-data.service';
     EmotionsComponent,
     EmotionSearchComponent,
     EmotionDetailComponent,
+    AlertComponent,
+        HomeComponent,
+        LoginComponent,
+        RegisterComponent
   ],
     
 
@@ -32,12 +46,24 @@ import { InMemoryDataService }  from 'in-memory-data.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    HttpModule,
+    FormsModule,
  //   BootstrapModalModule,
     HttpClientInMemoryWebApiModule.forRoot( InMemoryDataService, { dataEncapsulation: false } )
 
   ],
 
-  providers: [ EmotionService, MessageService],
+  providers:[
+
+  EmotionService,
+  MessageService,
+  AuthGuard,
+  AlertService,
+  AuthenticationService,
+  UserService,
+  JwtInterceptorProvider,
+  ErrorInterceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

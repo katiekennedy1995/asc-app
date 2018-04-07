@@ -5,7 +5,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { EmotionsComponent } from './emotions.component';
 import { EmotionDetailComponent } from './emotion-detail.component';
-
+import { HomeComponent } from './home/index';
+import { LoginComponent } from './login/index';
+import { RegisterComponent } from './register/index';
+import { AuthGuard } from './guards/index';
 
 
 
@@ -15,6 +18,8 @@ const routes: Routes = [
    {path: 'dashboard', component: DashboardComponent },
  // { path: 'login', component: LoginComponent },
   { path: 'detail/:id', component: EmotionDetailComponent },
+   { path: 'login', component: LoginComponent },
+    { path: 'register', component: RegisterComponent }
 
  
 ];
